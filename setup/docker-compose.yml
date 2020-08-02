@@ -17,7 +17,7 @@ services:
   control:
     image: codespaces/ansible-control:3.0.0
     ports:
-      - "8000:8000"
+      - "8002:8000"
     volumes:
       - cs-ansible:/root/workspace
     networks:
@@ -70,7 +70,7 @@ services:
   jenkins:
     image: jenkinsci/blueocean
     ports:
-      - 8080:8080
+      - 9090:8080
       - 50000:50000
     environment:
       - DOCKER_HOST=tcp://docker:2376
